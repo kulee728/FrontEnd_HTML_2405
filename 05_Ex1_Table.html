@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>영어로 검색 가능하다</title>
+    <meta charset="UTF-8"> 
+</head>
+<body>
+    <h1> 테이블 관련 추가 태그</h1>
+    <h3> th : table header (아래 설명)</h3>
+    <pre> 
+        - 테이블의 제목 / 내용 강조때 사용
+        - 두꺼운 글씨 + 가운데 정렬
+        - 링크 생성 가능
+    </pre>
+    <table border="3" style="border-collapse: collapse;background-color:rgb(216, 192, 192);">
+        <caption><b></b> 웹 사이트 종류(캡션)</caption>
+        <tr style="background-color: gold;">
+            <th> 웹 브라우저</th>
+            <th> 제조사&nbsp</th>
+            <th> 홈 페이지 링크</th>
+        </tr>
+        <tr>
+            <td> 크롬 Chrome</td>
+            <td> Google</td>
+            <td> <a href="https://www.google.com"> 구글 링크</a></td>
+        </tr>
+        <tr>
+            <td> Microsoft Edge</td>
+            <td> 마이크로소프트(주)&nbsp;</td>
+            <td> <a href="https://www.microsoft.com">microsoft.net&nbsp</a></td>
+        </tr>
+        <tr>
+            <td> Naver Whale </td>
+            <td> Naver;</td>
+            <td> <a href="https://www.naver.com">naver.com&nbsp</a></td>
+        </tr>
+    </table>
+    <hr>
+    <p> <h3> Caption 캡션</h3>
+        테이블에 대한 정보를 작성. 테이블 태그 직후 위치
+    </p>
+    <hr>
+    <h3> rowspan 과 colspan (병합) </h3>
+    <pre>
+        - 얼만큼 합칠지에 대한 숫자 값을 넣어준다.
+        - table style에 width = 100% 를 넣어 최대로 키울 수도 있다.
+    </pre>
+    <table border="1" style="border-collapse: collapse;width: 100%;"> 
+        <tr>
+        <th colspan="3">생년월일</th>
+        <th >이름</th>
+        <th colspan="3">거주지</th>
+        </tr>
+        
+        <tr>
+            <td>1999년</td>
+            <td>07월</td>
+            <td>28일</td>
+            <td>이강욱</td>
+            <td>서울시</td>
+            <td>용산구</td>
+            <td>이태원2동</td>
+        </tr>
+
+    </table>
+</body>
+</html>
