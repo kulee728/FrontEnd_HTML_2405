@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>영역관련태그</title>
+        <meta charset="utf-8">
+        <style>
+            .test{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            .testA{
+                width: 50px;
+                height: 100px;
+                background-color: yellow;
+            }
+            .one{
+                background-color: red;
+            }
+            .two{
+                background-color: yellow;
+            }
+            .three{
+                color:wheat ;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Style 태그 내용 족용 확인</h3>
+        <!--
+        스타일을 선택적으로 적용하려 할 때 : 
+            class="변수명" 넣어서 스타일을 구분지을 수 있다.
+            스타일 태그 안에 변수명에 대한 명세 가능
+        -->
+        <div class="test"></div>
+        오 신기하다
+        <div class="test"></div>
+        <div class="testA"></div>
+        <hr>
+        <br>
+        <h1>block 형식</h1>
+        <pre>
+            블록 형식 태그 > 화면에서 공간을 세로로 분할해주는 역할
+            --- h1~h6 (제목)
+            --- p, pre (문단)
+            --- hr (수평선)
+            --- div (영역 분할) >>>> text, img, 화면에 나타내고 싶은 모든것에 다 쓴다
+            블록 형식 태그들은 내용이 짧더라도 한 줄을 모두 차지하려는 성질이 있어,
+            다음 태그 내용은 다음에 작성.
+
+        </pre>
+        <div class="one">첫번째 DIV</div>
+        <div class="two">두번째 DIV</div>
+        <div class="three">세번째 DIV</div>
+        <h3> div 형식</h3>
+        <pre class="square">
+            - 가장 많이 사용하는 형식, 문서를 구분 짓는데에 사용
+            - 사용시 이중 div 형태로 많이 사용
+            - <mark>class</mark>는 div 뿐 아니라 <mark>모든 태그에서 사용 가능</mark>하다.
+            - class는 홈페이지를 꾸밀 때 style 내부 명시로 많이 사용한다.
+
+
+        </pre>
+        <h1>Inline 형식</h1>
+        <pre>
+            - 화면에서 가로를 사용 (가로 화면을 세로로 잘라서 나눈다)
+
+            - 한 줄을 모두 사용하지 않고, 내부 작성된 크기 만큼만 차지한다.
+            - width/height 크기 지정 속성 사용 불가
+            - line 형식 태그는 다음과 같다.
+            --- b (글씨 굵게)
+            --- i (글씨 기울이기)
+            --- mark (글씨 배경 하이라이팅)
+            --- span (영역 분할) 등이 있다
+        </pre>
+        <p><b>
+            Inline 형식은 가로에서 세로로 분할하는 성질을 갖고 있기에,</b> <mark>줄 넘김 없이 계속 옆으로만 작성된다.</mark>
+        </p>
+        <br>
+        <span class="one"> 첫 번째 span </span>
+        <span class="two"> 두 번째 span </span>
+        <span class="three"> 세 번째 span </span>
+        <ul>
+            <li>Block 형식 : 사각형 (가로를 모두 차지하는 영역)</li>
+            <li>Inline 형식 : 가로방향, 내용을 작성해준만큼에만 적용되는 영역</li>
+        </ul>
+        <h3>(예)block div 태그 확인</h3>
+        <div class="two">오늘도 점심을 많이 먹어 행복했다
+            <br>
+            <br>
+            하지만 나는 배고프다
+        </div>
+        <hr>
+        <h3>(예)inline span 태그 확인</h3>
+        <span class="two">오늘도 점심을 많이 먹어 행복했다
+            <br>
+            <br>
+            하지만 나는 배고프다
+        </span>
+
+</html>

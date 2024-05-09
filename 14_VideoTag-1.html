@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        video{
+            width: 500px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h2>비디오 태그</h2>
+    <pre>비디오 태그에 대해서 알아보자</pre>
+<!--
+    <p>인터넷주소</p>
+    <video src="https://static.videezy.com/system/resources/previews/000/008/297/original/Young_African_American_Woman_Pensive_Headphones_1.mp4"
+    controls autoplay>        
+    </video>
+    <p>상대경로</p>
+    <video src="../Media/test.mp4" controls autoplay>
+    </video>
+-->
+    <video controls autoplay muted loop>
+        <source src="../Media/test.mp4" type="video/mp4">
+        해당 브라우저에서 지원이 되지 않는 비디오 입니다.
+    </video>
+    <h4>비디오 태그 관련 속성</h4>
+        <pre>
+            - controls > 컨트롤 패널 지원(재생이 가능해진다)
+            - autoplay > 비디오 로드 시 자동 재생(muted 설정시에만 가능)
+            - muted > 음소거 최초
+            - loop > 자동 반복 재생
+
+            
+        </pre>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>비디오src실습</title>
+    <style>
+      video {
+        width: 1000px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0 auto;text-align: center;background-color: aqua;">
+    <!-- 
+        모든 스타일 적용은 body에 넣어준다.
+        margin 0 auto
+        > 알아서 자동으로 가운데 정렬. 아주 가끔 malfunction.
+        글자를 모두 가운데 정렬할때면 text-align center
+    -->
+    <h1>비디오실습</h1>
+    <video controls autoplay muted loop>
+      <source src="../Media/Pizza.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>
