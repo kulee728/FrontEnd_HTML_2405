@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 웹 속성에 대해서(meta, title, style, script, link)-->
+    <title>Blog선호도조사</title>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            background-color: aliceblue;
+            margin: 0 auto;
+            padding: 20px;   
+        }
+        .container{
+            /*text-align: center;*/
+            width:70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgb(139, 178, 212);
+            border-radius: 10px;
+        }
+        button{
+            background-color: moccasin;
+            color:brown;
+            padding: 10px 30px; /*padding의 인자가 두개인경우, 위아래 - 좌우 여백을 각각*/
+            border-radius: 15px;
+            border:none;
+        }        
+        h1{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>블로그 선호도 조사</h1>
+      <form>
+        <label>
+        <input type="radio" name="preferences" value="starredRestaurant">
+        맛집</label><br> <!--보통은 라벨로 input 을 감싼다.-->
+        <label>
+            <input type="radio" name="preferences" value="investment">
+            투자</label><br>
+        <label>
+            <input type="radio" name="preferences" value="personalFinance">
+            재테크</label>
+            <br><br><br>
+        <label>
+            <input type="checkbox" name="subscribe" value="newsLetter">
+            뉴스레터</label>
+        <label>
+            <input type="checkbox" name="subscribe" value="email">
+            메일수신</label>
+            <br><br>
+            <button type="submit">제출하기</button>
+      </form>
+    </div>
+  </body>
+</html>
