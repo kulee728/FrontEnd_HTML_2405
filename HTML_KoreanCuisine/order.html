@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>한식 주문하기</title>
+    <style>
+      body {
+        background-color: #f9f9f9;
+      }
+
+      .header,.footer {
+        background-color: rgb(42, 41, 41);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .navigation{
+        background-color: rgb(108, 110, 112);
+        text-align: center;
+        padding:10px;
+      }
+      a{
+        text-decoration: none;
+        color:rgb(75, 244, 146);
+        font-weight: 600;
+      }
+      ul{
+        list-style-type: none;
+      }
+      li{
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto; /*가운데 정렬 같은 나열 auto*/
+        border-radius: 5px;
+        box-shadow: 0 0 10px #d7d7d7;
+        width: 70%;
+      }
+      h1,
+      button {
+        text-align: center;
+      }
+      button {
+        background-color: #338838;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        width: 500px;
+      }
+      .mainMenuImg {
+        /*display flex를 상위에 추가함으로써 가로 나열도 가능하다 */
+        height : 300px;
+        width: 300px;
+      }
+      .sideMenuImg {
+        width: 100px;
+        height:100px;
+      }
+      label {
+        font-weight: bold;
+      }
+      .menuBlock{
+        display: flex;
+        text-align: center;
+        margin: 20px auto;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <h1>KH 배달 서비스</h1>
+      </div>
+      <div class="navigation">
+        <ul>
+            <li><a href="homePage.html">홈</a></li>
+            <li><a href="order.html">주문하기</a></li>
+            <li><a href="koreanMenuIntro.html">한식메뉴소개</a></li>
+            <li><a href="koreanMenuIntro.html">피자메뉴소개</a></li>
+        </ul>
+      </div>
+
+    <div class="container">
+
+
+
+      <h1>한식 주문하기</h1>
+      <form>
+        <div>
+          <label>메뉴선택</label><br />
+          <div class="menuBlock">
+        <div>
+            <img src="./foodOrderImage/된장찌개.PNG" class="mainMenuImg" />
+            <br>
+            <input type="radio" name="menu" />된장찌개
+          </div>
+          <div>
+            <img src="./foodOrderImage/비빔밥.PNG" class="mainMenuImg" />
+            <br>
+            <input type="radio" name="menu" />비빔밥
+          </div>
+          <div>
+            <img src="./foodOrderImage/불고기.PNG" class="mainMenuImg" />
+            <br>
+            <input type="radio" name="menu" />불고기
+          </div>
+        </div>
+        <br>
+        <div class="menuBlock">
+          <label>추가옵션</label><br />
+          <div>
+          <img src="./foodOrderImage/계란.PNG"class="sideMenuImg"/>
+          <br>
+          <input type="checkbox" />계란
+          </div>
+          <div>
+          <img src="./foodOrderImage/두부.PNG"class="sideMenuImg"/>
+          <br>
+          <input type="checkbox" />두부
+          </div>
+          <div>
+          <img src="./foodOrderImage/김치.PNG"class="sideMenuImg"/>
+          <br>
+          <input type="checkbox" />김치
+          </div>
+        </div>
+        <div>
+          <label>맛 선택 : </label>
+          <select>
+            <option>매운 맛</option>
+            <option>보통 맛</option>
+            <option>순한 맛</option>
+          </select>
+        </div>
+        <div>
+          <label>배달주소: </label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <br /><small>산간/도서 지역은 배달이 제한됩니다</small>
+        </div>
+        <button>주문하기</button><br>
+      </form>
+      <div class="main"></div><br>
+
+
+    </div>
+    <div class="footer">&copy;2024 배달 서비스, All rights reserved.</div>
+  </body>
+</html>
