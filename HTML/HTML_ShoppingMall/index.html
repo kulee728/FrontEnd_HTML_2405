@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head> <!-- script 는 body 용 head 용이 따로 있다.-->
+    <meta charset="utf-8" />
+    <title>KH 쇼핑몰</title>
+    <link rel="stylesheet" href="../../CSS/Styles/Shopping.css" />
+    <style>
+      .productImage {
+        border: 1px solid black;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-right: 5px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 4px grey;
+        width: 70%;
+      }
+      .productImage img {
+        width: 50%;
+        height: auto;
+      }
+      .productImage button {
+        /*마우스 올리기 전 모습*/
+        background-color: #4bcffa;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        /*버튼 위에 마우스를 올렸을 때 마우스 아이콘 변경*/
+        cursor: pointer;
+      }
+
+      .productImage button:hover {
+        /*마우스를 버튼 위에 올린 후 모습*/
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>KH 쇼핑몰</h1>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">제품</a></li>
+          <li><a href="#">장바구니</a></li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="productImage">
+          <img src="../Media/상의.png" alt="제품 이미지" />
+          <h2>엘레강스 셔츠</h2>
+          <p>
+            상품 설명 : 독특한 텍스처와 조직감이 매력적인 텍스처 오픈 카라
+            셔츠입니다.<br />
+            여유 있는 릴랙스 핏에 어깨선이 드롭된 실루엣으로 다양한 스타일에
+            매치하기 좋은 아이템입니다.
+          </p>
+          <p>$ 9,000</p>
+          <button onclick="ButtonClicked()">장바구니에 추가</button>
+        </div>
+        <div class="productImage">
+          <img src="../Media/여름상의.png" alt="제품 이미지" />
+          <h2>하와이안 포켓 셔츠</h2>
+          <p>
+            상품 설명 : 쾌적한 착용감의 릴렉스 하와이안 셔츠입니다.<br />
+            베이직한 디자인과 여유 있는 핏으로 여름철 다양한 룩에 매치하기
+            좋습니다.<br />
+            포켓은 내부 포켓으로 시크릿한 느낌을 제공합니다.
+          </p>
+          <p>
+            지금 할인! : $600
+            <s style="color: red"><small style="color: red">$12,000</small></s>
+          </p>
+          <button onclick="ButtonClicked()">장바구니에 추가</button>
+        </div>
+        <div class="productImage">
+          <img src="../Media/바지.png" alt="제품 이미지" />
+          <h2>바지</h2>
+          <p>
+            상품 설명 : 바지입니다. 인간의 하체를 감싸 냉기와 이물질로부터
+            하체를 보호합니다.
+          </p>
+          <p>$ 70</p>
+          <button onclick="ButtonClicked()">장바구니에 추가</button>
+        </div>
+        <div class="productImage">
+          <img src="../Media/긴바지.png" alt="제품 이미지" />
+          <h2>쿨링 딥 와이드핏 팬츠</h2>
+          <p>
+            상품 설명 : 남성 기능성 팬츠. 쾌적한 착용감의 쿨링 딥 와이드 핏 팬츠
+            허리의 엘라스틱 밴드와 뛰어난 신축성 소재로 활동성이 좋음 접촉
+            냉감기능을 검증받아 착용감이 쾌적하고 시원합니다.
+          </p>
+          <p>
+            $ 100 <small><s style="color: red">$400</s></small>
+          </p>
+          <a href="팬츠4.html">상세보기</a>
+          <button onclick="ButtonClicked()">장바구니에 추가</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy;2024 쇼핑몰</p>
+      </div>
+    </div>
+
+
+    <script>
+        /*아직은 안배웠습니다. event handling */
+        //스크립트 주석
+        //호출시 
+        function ButtonClicked() {
+          alert("상품이 장바구니에 추가되었습니다.");
+        }
+      </script>
+  </body>
+</html>
