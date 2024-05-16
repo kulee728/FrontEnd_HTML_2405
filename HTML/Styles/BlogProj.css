@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    font-family: YClover-Bold;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+}
+.header{
+    /* 
+    background-color : 주로 배경을 단색으로 채울 때
+    대신 오늘은 background 이미지를 써보자
+    -> 그라데이션, 경로 사용 가능.
+    background-image : url(~~)
+    background-image :  linear-gradient (방향, 색상1, 색상2,..)
+                        radial-gradient(중심위치,원모양크기,색상1,생상2,...)
+    */
+    background-image: linear-gradient(to right,#ff0080,#ffff80);
+    
+}
+.navigation{
+    background-image: radial-gradient(circle,#eeaeca,#94bbe9);
+    text-align: center;
+    padding:5px
+}
+
+.navigation a{ /*네비게이션 클래스에 속한 a태그에만 적용..구분자 띄어쓰기 */
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+}

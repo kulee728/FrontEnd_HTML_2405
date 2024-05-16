@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>폰트 .css 분리</title>
+    <link rel="stylesheet" href="../Styles/01_CSSPre01.css" />
+    <style>
+      @font-face {
+        font-family: "YClover-Bold";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+      /* 폰트를 모든 태그에 적용 원한다면...* 사용, 혹은 body에 작성*/
+      * {
+        font-family: 'YClover-Bold';
+      }
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <h2 class="greetings">환영합니다.</h2>
+    <p>어서 오소예</p>
+    <pre>CSS는 눈에서 보이는 각종 양식을 꾸며주는 언어</pre>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 실습 적용하기</title>
+    <style>
+        /* CSS 주석
+        /* style 태그 : CSS를 작성하기 위한 태그*/
+        /* 태그 선택자 */
+        h1{
+            color: orangered;
+        }
+        strong{
+            font-size:18px;
+            font-family: '궁서체';
+            /* 폰트 바꾸기  */
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 적용하기</h1>
+    <strong>폰트 변경하기</strong>
+    <p>컴퓨터 내장 폰트</p>
+    <h2>font-family</h2>
+    <pre>
+        - font-family A,B,C >> A폰트가 없으면 B, 없으면 C 폰트
+        -영문이 아닌 폰트는 '' 혹은 "" 따옴표를 써야한다. (ex. '바탕')
+        <!--
+            font-family: 'Franklin Gothic','Arial Narrow',Arial,sans-serif
+            예를 들어..
+            HELLO  >>> font-family:A,B,C
+            안녕  >>> font-family:'A','B','C'
+            HELL안녕O  >>> font-family:A,'a',B,'b',C,'c'\
+        -->
+        font-family 의 우선순위는 개발자가 정한다.
+    </pre>
+    <h2>font-face</h2>
+    <pre>
+        jsdelivr.com 이나 google 폰트를 많이 사용
+        @font-face{
+            font-family:'이름설정';
+            src:url주소입력 format(포맷입력);
+            fon-weight:굵기;
+            font-style:스타일
+        }
+    </pre>
+</body>
+</html>
