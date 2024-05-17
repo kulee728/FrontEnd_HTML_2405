@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>레이아웃 스타일</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>레이아웃 (layout)</h1>
+    <p>
+      사용 목적을 기반으로 시각적 효과를 구성하는 행위 (어떻게 예쁘게 꾸밀 수
+      있나?)<br />
+      사전적 의미 : 배치하다 / 정리하다 기술적 의미 : 구성요소를 제한된 공간에
+      효율적으로 배치하는 것
+    </p>
+    <hr />
+    <h3>디스플레이(Display) :</h3>
+    <p>
+      화면 표시나 형식에 대한 배치 지정<br />
+      태그가 화면에 어떻게 보여질지 형식을 지정하는 속성
+    </p>
+    <pre>
+            - block ..화면을 수직 분할 (한 줄 다 차지하겠다, 행을 나눔)
+                +)width, height 지정 가능
+                
+            - inline : 화면을 수평 분할(디자인을 글자, 문자열 취급)
+                +)가로, 세로 지정 불가능
+                
+            - inline-block : inline 처럼 수평분할은 가능하되, block 처럼 가로 세로 지정가능
+                +)가로, 세로 지정 가능
+
+            - none : 태그가 존재하지만 화면에는 보이지 않게 숨김
+
+            - flex : 태그 간 간격, 정렬 방향을 유연하게 처리하는 방식
+
+            - grid : 격자 무늬 형식으로 화면을 분할하는 형식
+            </pre
+    >
+    <hr />
+    <h3>block 형식 요소를 inline 형식으로 변경하기</h3>
+    <style>
+      .block {
+        /* border >  테두리 */
+        border: 7px dotted black;
+        width: 150px;
+        height: 150px;
+        color: white;
+        display: block;
+      }
+      .area1 {
+        background-color: red;
+      }
+      .inline {
+        display: inline;
+      }
+      .area2 {
+        background-color: orange;
+        color: black;
+      }
+    </style>
+    <div class="block area1 inline">
+      <!-- class 두개 주기-->
+      1번 영역
+    </div>
+
+    <div class="block area2 inline">2번영역</div>
+
+    <h3>inline-block, none</h3>
+    <pre>
+                - inline, inline-block 은 영역을 String 같은 형식으로 생각하는게 자연스럽다
+                - html 에서 글, 태그 사이 띄어쓰기 엔터는 모두 한칸으로 인식
+                - inline-block 형식의 태그가 아래 처럼 줄이 바뀐 형태로 작성되면 태그 사이에 띄어쓰기 한 칸이 추가된다.
+            </pre
+    >
+
+    <style>
+      .inlineBlock {
+        display: inline-block;
+      }
+      .area3 {
+        background-color: green;
+      }
+      .hidden {
+        visibility: hidden;
+        /*눈에 보이지 않지만 공간은 유지 */
+      }
+      .area4 {
+        background-color: blue;
+      }
+      .area5 {
+        background-color: brown;
+      }
+      .area6 {
+        background-color: purple;
+      }
+      .none {
+        /*
+                    해당 태그의 영역을 아얘 배제시킴 (공간도 없음)
+                    사용자에게 존재 자체를 드러내지 않기 위해 사용
+                    */
+        display: none;
+      }
+    </style>
+
+    <span class="block area1 inlineBlock"> 1번 영역</span>
+    <!--엔터를 쳐서 span 태그 줄 바꿈을 하면 1번과 2번 사이 띄어쓰기가 존재한다
+            -->
+    <span class="block area2 inlineBlock"> 2번 영역</span>
+    <span class="block area3 inlineBlock hidden"> 3번 영역</span>
+    <span class="block area4 inlineBlock"> 4번 영역</span>
+    <span class="block area5 inlineBlock none"> 5번 영역</span>
+    <span class="block area6 inlineBlock"> 6번 영역</span>
+
+    <hr />
+    <h3>화면 영역 분할용 영역</h3>
+    <h4>상하로 2분할 하기</h4>
+    <style>
+        .container{
+            border:3px solid black;
+            width:470px;
+            height: 470px;
+        }
+        .container > div{ /*이건 뭐냐? 컨테이너 밑 div가 존재한다는 표시*/
+            width: 100%;
+            height: 50%; /*컨테이너가 설정한 470 크기 안에서 크기 비율 유지하라는 의미
+            (자식 CSS)*/
+        }
+        .container > div:first-child{
+            background-color: lightpink;
+        }
+        .container > div:last-child{
+            background-color: darkslategray;
+        }
+    </style>
+    <div class="container">
+        <div>dd </div>
+        <div>aa </div>
+    </div>
+    <h2>상하 3분할</h2>
+        <pre>
+            조건 : 지식
+            - 20 : 30 : 50 비율로 줄래
+            - 배경색 : orange yellow green
+            - 이외 필요한 속성 자유롭게 추가해주세요
+        </pre>
+    
+
+        <style>
+        #tag2 > div:first-child{
+            background-color: orange;
+            height: 20%;
+        }
+        #tag2 > div:nth-child(2){
+            background-color: yellow;
+            height: 30%;
+        }
+
+        #tag2 > div:last-child{
+            background-color: green;
+            height: 50%;
+        }
+        </style>
+
+    <div class="container" id="tag2">
+        <div class="배경 1 높이-20"></div>
+        <div class="배경 2 높이-30"></div>
+        <div class="배경 2 높이-50"></div>
+    </div>
+  </body>
+</html>

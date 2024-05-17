@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ment</title>
+</head>
+<body>
+    <h1>태그의 여백 관련 스타일</h1>
+    <pre>
+        1. padding
+        - 내용과 선 사이 공간
+
+        2. border (테두리)
+        - 영역 구분 선
+
+        3. margin (여백 / 간격)
+        - 다른 태그와의 간격을 나타냄
+        <hr>
+
+        <style>
+            .보더{
+                border: 
+                10px /* 선의 두께 */
+                dashed /* 선의 종류..이떄 none은 테두리를 지운다 */
+                /*
+                선 종류는 추가로
+                dashed double 
+                
+                (입체)
+                groove ridge 
+                inset outset 정도만 알아두자
+                */
+                black; /*선의 색상 */
+
+
+            }
+
+            .박스{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+            }
+
+            .패딩{
+                width: 200px;
+                height: 200px;
+                border:2px solid black;
+                padding:20px;
+            }
+
+        </style>
+        <h3>border 영역</h3>
+        <div class="보더">내용</div>
+        <div class="박스 패딩">패딩</div>
+
+        <style>
+            .마진{
+                /* 상하좌우 20px 간격주기*/
+                margin: 20px; /*나한테서 떨어져! */
+                
+            }
+        </style>
+
+
+        <div class="박스 마진">마진 내용</div>
+        <h3>padding margin border 방향성 (외워!)</h3>
+        <pre>
+            000 - padding, margin, border를 나타냄
+            000-top : 크기 -> 위쪽 방향 크기 지정
+            000-button : 크기 -> 아래쪽 방향 크기 지정
+            000-left : 크기 -> 왼쪽
+            000-right : 크기 -> 오른쪽
+            
+            단, border 는 [크기 모양 색상]
+        </pre>
+        <h3><mark>padding margin</mark> border-width 크기 한번에 지정</h3>
+        <pre>
+            속성 값 1개 : 상하좌우 모두
+            
+            속성 값 2개 : 상하 , 좌우
+            padding : 20px 10px 상하 20, 좌우 10px
+            margin : 20px 5px 상하 20, 좌우 5px
+
+            속성 값 3개 : 상 좌우 하
+            margin : 30px 10x 5px 
+            상30,  좌우 10px, 하5px
+            
+            속성 값 4개 : 상 우 하 좌
+            (시계방향)
+            padding : 5px 1px 2px 3px
+            12시부터 5, 1, 2 ,3 px 만큼 패딩
+        </pre>
+
+        <h3> margin : 0 auto 에 대해</h3>
+
+
+
+
+
+
+
+
+
+    </pre>
+    <br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

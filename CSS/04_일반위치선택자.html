@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>일반 위치 선택자</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>일반적인 위치나 구조를 나타내는 선택자</h1>
+        <pre>
+            - 형제 관계 있는 태그들 중 특정 태그만 선택하는 선택자
+            - 선택하는 기준을 통해 위치를 구분함
+            <div class="A"></div>
+            <div class="B"></div>
+            A : 태그 선택 기준 div 태그 대신 A 변수명으로 선택
+            A >> first-child, 가장 첫번째
+            첫번째가 A가 맞다면 선택
+            B>> last-child
+            <div class="형제들">
+                <div class="일"></div>
+                <div class="이"></div>
+                <div class="삼"></div>
+                <div class="사"></div>
+            </div>
+            일 : nth-child(1)
+
+            만약 태그 옆 class/id 가 없다면 태그 명을 그대로 작성해도 됨.
+            <div class="선택받은 아이들">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            .선택받은아이들 > div:nth-child(1){]}
+            이런식으로 쓴다면
+            "선택받아이들 태그" 안에서 가장 첫번째 작성된 div 태그를 선택
+            만약 중간 자식들을 건너뛰고 맨 마지막에 있는 자식 만 꾸며주고 싶다면
+            .선택받은아이들 > div:last-child{}
+            
+            태그
+            는 div span a li ul...모든 태그에 사용 가능
+
+        </pre>
+    </body>
+</html>
