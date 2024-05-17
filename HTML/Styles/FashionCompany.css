@@ -1,0 +1,41 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding :0;
+}
+header,footer{
+    background-color: aliceblue;
+    text-align: center;
+    padding:20px
+}
+nav{
+    background-color: aliceblue;
+    padding: 15px;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+main{
+    width:80%;
+    margin:20px auto;
+}
+.소개클래스 {
+    display:block;
+    /*각 섹션 별로 block 을 줘 섹션 간 엔터키 간격이 존재함 */
+
+    margin-bottom: 20px;
+}
+.소개클래스 .블록{
+
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding : 8px
+}
+.소개클래스 .블록 img{
+    width:200px;
+    height:200px;
+}
