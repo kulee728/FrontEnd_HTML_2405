@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 글 작성하기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid"> <!--세로로 나열된 요소를 가로로 한 줄 정렬-->
+          <a class="navbar-brand" href="#">옷 판매 사이트</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> 
+              <!--ms auto 추가하였다(가능한 오른쪽으로 정렬).
+              margin start 의약자, 왼쪽 여백을 최대한 많이 제공하겠다는 뜻
+              -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cart <span class="badge bg-success" id="shoppingCartBadge">0</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+     <div class="container">
+        <div class="mb-3">
+            <label class="form-label">제목</label>
+            <input type="text" class="form-control"required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">작성자</label>
+            <input type="text" class="form-control"required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">내용</label>
+            <textarea class="form-control"rows="5" cols="20" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">이미지 업로드</label>
+            <input id="이미지가져오기" type="file" class="form-control" accept="image/*" multiple></input>
+        </div>
+     </div>
+     
+     <div id="이미지미리보기" class="mb-3"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<footer class="footer mt-5">
+    <div class="container" style="text-align: center;">
+        <p>&copy; 2024 브랜드명, All Rigths Reserved</p>
+        <p>
+            <a href="#">개인정보처리방침</a> | <a href="#">이용약관</a>
+        </p>
+    </div>
+
+</footer>
+
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>attr이미지변경</title>
+    <style>
+        .바지꾸미기{
+            width: 300px;
+            cursor: pointer;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function imgChanger(){
+            const img = $("#이미지변경");
+            const pathFolder = "../../css-html/HTML/Media/";
+            if(img.attr('src')==pathFolder+"바지.png")
+                //img.attr('src',pathFolder+"긴바지.png");
+                img.attr({
+                'src':pathFolder+"긴바지.png",
+                'alt':"긴바지"
+                }
+                );
+            else{
+                img.attr({
+                'src':pathFolder+"바지.png",
+                'alt':"바지"
+                }
+                );
+            }
+            
+        }
+        
+
+    </script>
+</head>
+<body>
+    <div class="container text-center">
+        <h2>클릭하면 이미지가 변경됩니다.</h2>
+        <img id="이미지변경" src="../../css-html/HTML/Media/바지.png" alt="바지" class="img-fluid 바지꾸미기" onclick="imgChanger()">
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
