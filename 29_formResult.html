@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 결과</title>
+    <script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!--jQuery-->
+    <script>
+        $(document).ready(function(){
+            //URL parameter to show id 이름결과 tag
+            const url = new URLSearchParams(window.location.search);
+            const name = url.get('user-name');
+            $("#이름결과").text(name);
+
+        })
+    </script>
+</head>
+<body>
+    <h1>폼 결과</h1>
+    <p>이름 : <span id="이름결과"></span></p>
+</body>
+</html>

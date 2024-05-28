@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 결과</title>
+    <link rel="stylesheet" href="30_SignIn.css">
+    <style>
+        .container{
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px white;
+            text-align: center;
+        }
+        h1{
+            color:yellowgreen;
+        }
+        p{
+            color:#333;
+            font-size: 18px;
+        }
+        p span{
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!--jQuery-->
+    <script>
+        $(document).ready(function(){
+
+            const urlGet =  new URLSearchParams(window.location.search);
+            const name = urlGet.get('signName');
+            const age = urlGet.get('signAge');
+            const id = urlGet.get('signId');
+            const gender = urlGet.get('signGender');
+
+            const hobbies = urlGet.getAll('signHobby');
+
+            $("#nameResult").text(name);
+            $("#ageResult").text(age);
+            $("#idResult").text(id);
+            $("#genderResult").text(gender);
+            $('#hobbiesResult').text(hobbies.join(','));
+            //$('#hobbiesResult').text(hobbies[0]);
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h1>회원 가입 완료를 환영합니다.</h1>
+    <p>이름 : <span id="nameResult"></span></p>
+    <p>성별 : <span id="genderResult"></span></p>
+    <p>나이 : <span id="ageResult"></span></p>
+    <p>아이디 : <span id="idResult"></span></p>
+    <p>취미 : <span id="hobbiesResult"></span></p>
+    </div>
+</body>
+</html>
